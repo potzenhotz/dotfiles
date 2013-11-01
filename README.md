@@ -1,4 +1,6 @@
-kakaka:dotfiles
+dotfiles
 ========
 
 All my dotfiles 
+
+.vimrc

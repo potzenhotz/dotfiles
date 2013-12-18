@@ -19,7 +19,8 @@ set encoding=utf-8
 
 "show trailing spaces and hard tabs
 set list lcs=tab:>-
-
+"  Change default to ignore case for text searches
+set ic
 
 "Zeilenumbruch wann von rechter Seite
 set tw=132

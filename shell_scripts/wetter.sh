@@ -7,7 +7,7 @@ echo -e "\033[1mHamburg:\033[0m"
 echo
 
 #Local Weather
-echo "\033[1mCondition\033[0m"
+echo -e "\033[1mCondition\033[0m"
 
 curl --silent "http://xml.weather.yahoo.com/forecastrss?p=GMXX0049&u=c" |grep condition \
 | awk -F\" '{print "Date: " $8 ;}'
@@ -22,13 +22,13 @@ curl --silent "http://xml.weather.yahoo.com/forecastrss?p=GMXX0049&u=c" |grep wi
 | awk -F\" '{print "Chill: " $2 "\n" "Direction: " $4 "\xc2\xb0" "\n" "Speed: " $6 " km/h";}'
 
 #Sunrise/set
-echo "\033[1mDaylight\033[0m"
+echo -e "\033[1mDaylight\033[0m"
 curl --silent "http://xml.weather.yahoo.com/forecastrss?p=GMXX0049&u=c" |grep astronomy \
 | awk -F\" '{print "Sunrise: " $2 "\n" "Sunset: " $4;}'
 
 
 #Forecast
-echo "\033[1mForecast\033[0m"
+echo -e "\033[1mForecast\033[0m"
 curl --silent "http://xml.weather.yahoo.com/forecastrss?p=GMXX0049&u=c" | grep High: \
 | sed -e 's/<br \/>//' 
 

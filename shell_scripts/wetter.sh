@@ -3,7 +3,7 @@
 #curl --silent "http://xml.weather.yahoo.com/forecastrss?p=GMXX0049&u=c" |grep location \
 #|awk -F\" '{print $2":" ;}'
 echo
-echo "\033[1mHamburg:\033[0m"
+echo -e "\033[1mHamburg:\033[0m"
 echo
 
 #Local Weather

@@ -1,4 +1,4 @@
-
+#!/bin/tcsh
 #Location
 #curl --silent "http://xml.weather.yahoo.com/forecastrss?p=GMXX0049&u=c" |grep location \
 #|awk -F\" '{print $2":" ;}'

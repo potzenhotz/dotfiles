@@ -1,6 +1,10 @@
 
 "Syntax
-syntax on
+syntax enable
+colorscheme solarized
+set background=dark
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans = 1
 "color smyck
 
 "Add line numbers
@@ -37,8 +41,6 @@ set title
 set scrolloff=3
 
 " Color schemes:
-colorscheme solarized
-set background=light
 
 
 map <F7> :tabprevious<CR>

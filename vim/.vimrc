@@ -35,8 +35,11 @@ set title
 
 "maeintain more context around the cursor
 set scrolloff=3
+
 " Color schemes:
-colorscheme habiLight
+colorscheme solarized
+set background=light
+
 
 map <F7> :tabprevious<CR>
 map <F8> :tabnext<CR>

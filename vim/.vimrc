@@ -2,9 +2,9 @@
 "Syntax
 syntax enable
 colorscheme solarized
-set background=dark
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans = 1
+set background=light
+let g:solarized_termcolors=256
+let g:solarized_termtrans = 1
 "color smyck
 
 "Add line numbers

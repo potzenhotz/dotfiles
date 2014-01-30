@@ -2,7 +2,7 @@
 "Syntax
 syntax enable
 "set background=light
-colorscheme github
+colorscheme molokai
 "color smyck
 
 "Add line numbers

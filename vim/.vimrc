@@ -1,8 +1,8 @@
 
 "Syntax
 syntax enable
-"set background=light
-colorscheme molokai
+"set background=dark
+colorscheme github
 "color smyck
 
 "Add line numbers

@@ -1,10 +1,8 @@
 
 "Syntax
 syntax enable
-set background=light
-let g:solarized_termcolors=256
-let g:solarized_termtrans = 1
-colorscheme solarized
+"set background=light
+colorscheme github
 "color smyck
 
 "Add line numbers

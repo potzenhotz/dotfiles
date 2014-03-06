@@ -37,7 +37,7 @@ set wildmode=list:longest
 
 set title
 
-
+set hlsearch
 "maeintain more context around the cursor
 set scrolloff=3
 

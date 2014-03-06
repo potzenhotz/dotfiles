@@ -20,7 +20,7 @@ curl --silent "http://xml.weather.yahoo.com/forecastrss?p=GMXX0049&u=c" |grep at
 | awk -F\" '{print "Humidity: " $2 " %" "\n""Visibility: " $4 "\n" "Pressure: " $6 " hPa";}'
 
 curl --silent "http://xml.weather.yahoo.com/forecastrss?p=GMXX0049&u=c" |grep wind \
-| awk -F\" '{print "Chill: " $2 "\n" "Direction: " $4 "\xc2\xb0" "\n" "Speed: " $6 " km/h";}'
+| awk -F\" '{print "Chill: " $2 "\xc2\xb0 C"  "\n" "Direction: " $4 "\xc2\xb0" "\n" "Speed: " $6 " km/h";}'
 
 #Sunrise/set
 echo -e "\033[33mDaylight\033[0m"

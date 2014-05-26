@@ -41,6 +41,10 @@ set hlsearch
 "maeintain more context around the cursor
 set scrolloff=3
 
+"sets increment search
+set incsearch 
+
+
 " Color schemes:
 
 

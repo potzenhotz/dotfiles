@@ -14,9 +14,9 @@ set ruler
 
 "whitespace
 set nowrap
-set ts=2
-set shiftwidth=2
-set softtabstop=2
+set ts=2  "tabstop
+set shiftwidth=2  "indent
+set softtabstop=2 
 set expandtab
 
 " Set encoding
@@ -37,9 +37,15 @@ set wildmode=list:longest
 
 set title
 
+
+"sets higlight search
 set hlsearch
+
 "maeintain more context around the cursor
 set scrolloff=3
+
+"sets increment search
+set incsearch 
 
 " Color schemes:
 

@@ -2,6 +2,9 @@
 "Syntax
 syntax enable
 set background=dark
+
+"python
+filetype indent plugin on
 "set t_Co=256
 let g:solarized_termtrans = 1
 let g:solarized_termcolors=16
@@ -14,9 +17,9 @@ set ruler
 
 "whitespace
 set nowrap
-set ts=2
-set shiftwidth=2
-set softtabstop=2
+set ts=8
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " Set encoding
@@ -34,6 +37,8 @@ set tw=132
 set wildmenu
 set wildmode=list:longest
 
+"will allow to use backspace with insert properlly
+set backspace=2
 
 set title
 
@@ -68,3 +73,5 @@ function! Tab_Or_Complete()
 endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/dict/words"
+
+

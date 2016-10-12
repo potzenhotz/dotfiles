@@ -55,9 +55,9 @@ set incsearch
 
 " Color schemes:
 
+"map ctrl+p to inte3ractivly start the script
+map <C-p> :w<CR>:!python3 %<CR>
 
-map <F7> :tabprevious<CR>
-map <F8> :tabnext<CR>
 
 "Use TAB to complete when typing words, else inserts TABs as usual.
 "Uses dictionary and source files to find matching words to complete.

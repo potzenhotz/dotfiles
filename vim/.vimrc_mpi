@@ -12,6 +12,7 @@ colorscheme github
 set number
 set ruler
 
+
 "whitespace
 set nowrap
 set ts=2  "tabstop

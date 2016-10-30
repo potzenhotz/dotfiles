@@ -1,4 +1,43 @@
 
+" set the runtime path to include Vundle and initialize
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
+
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+
+" " let Vundle manage Vundle, required
+ Plugin 'gmarik/Vundle.vim'
+
+" " Add all your plugins here (note older versions of Vundle used Bundle instead
+" of Plugin)
+Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-scripts/indentpython.vim'
+"Bundle 'Valloric/YouCompleteMe'
+
+
+
+" " All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"Pretty 
+let python_highlight_all=1
+syntax on
+
+"Hide .pyc files
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+"Powerline
+"set rtp+=$HOME/.vim/bundle/powerline/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
+
+
 "Syntax
 syntax enable
 set background=dark
@@ -52,12 +91,27 @@ set scrolloff=3
 "sets increment search
 set incsearch 
 
+"highlighting 
+highlight Search     ctermfg=Black      ctermbg=Red     cterm=NONE
 
 " Color schemes:
 
 "map ctrl+p to inte3ractivly start the script
 map <C-p> :w<CR>:!python3 %<CR>
 
+"cycling buffers
+:nnoremap <C-n> :bnext<CR>
+:nnoremap <C-b> :bprevious<CR>
+
+"map ctrl hjkl to switch buffers
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"show whitespaces
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "Use TAB to complete when typing words, else inserts TABs as usual.
 "Uses dictionary and source files to find matching words to complete.
@@ -77,4 +131,5 @@ endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/dict/words"
 
-
+"Start NERDTree directly
+au VimEnter *  NERDTree

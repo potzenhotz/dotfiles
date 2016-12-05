@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -95,3 +94,7 @@ zstyle ':completion:*' special-dirs true
 #./wetter.sh
 export PATH=/usr/local/bin:$PATH
 export PATH=/anaconda/bin:$PATH
+
+#Workaround for pandas python 
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"

@@ -17,7 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-scripts/indentpython.vim'
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 
 
 
@@ -36,6 +36,11 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 "set rtp+=$HOME/.vim/bundle/powerline/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
+
+"CompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_python_binary_path = 'python'
 
 
 "Syntax
@@ -133,3 +138,4 @@ endfunction
 
 "Start NERDTree directly
 au VimEnter *  NERDTree
+

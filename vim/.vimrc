@@ -17,7 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 
 
 
@@ -38,9 +38,9 @@ set laststatus=2
 set t_Co=256
 
 "CompleteMe
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_python_binary_path = 'python'
+"let g:ycm_autoclose_preview_window_after_completion=1
+"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_python_binary_path = 'python'
 
 
 "Syntax
@@ -75,10 +75,10 @@ set list lcs=tab:>-
 set ic
 
 "Zeilenumbruch wann von rechter Seite
-set tw=80
+set tw=110
 
 "Colorcolumn als Hilfe
-set colorcolumn=80 
+set colorcolumn=110 
 
 "TAB gibt alle moeglichkeiten
 set wildmenu

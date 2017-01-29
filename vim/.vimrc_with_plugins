@@ -145,5 +145,5 @@ endfunction
 :set dictionary="/usr/dict/words"
 
 "Start NERDTree directly
-"au VimEnter *  NERDTree
+"""au VimEnter *  NERDTree
 

@@ -1,22 +1,75 @@
+" VIMRC
 
-filetype plugin indent on    " required
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-"Pretty 
-let python_highlight_all=1
-syntax on
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+
+" " let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" " Add all your plugins here (note older versions of Vundle used Bundle instead
+" of Plugin)
+"""Plugin 'nvie/vim-flake8'
+"""Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+"vim airline is faster than pwoerline
+"Bundle 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-scripts/indentpython.vim'
+"Bundle 'Valloric/YouCompleteMe'
+
+" " All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+
+"Hide .pyc files
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+
+" enable syntax and plugins (for netrw)
+syntax enable
+filetype plugin on
+
+" enter the current millenium
+set nocompatible
 
 "Syntax
-syntax enable
 set background=dark
 
-"python
-"filetype indent plugin on
+
+" FINDING FILES:
+
+" " Search down into subfolders
+" " Provides tab-completion for all file-related tasks
+set path+=**
+
+" " Display all matching files when we tab complete
+set wildmenu
+
+" NOW WE CAN:
+" " - Hit tab to :find by partial match
+" " - Use * to make it fuzzy
 "
+" " THINGS TO CONSIDER:
+" " - :b lets you autocomplete any open buffer
+
+
+
+
+
+" PYTHON:
+"filetype indent plugin on
 "set t_Co=256
 let g:solarized_termtrans = 1
 let g:solarized_termcolors=16
 colorscheme solarized 
-"color smyck
+"Pretty 
+let python_highlight_all=1
 
 "Add line numbers
 set number
@@ -95,3 +148,5 @@ endfunction
 :set dictionary="/usr/dict/words"
 
 
+"Start NERDTree directly
+au VimEnter *  NERDTree

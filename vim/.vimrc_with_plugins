@@ -1,9 +1,54 @@
 
+" set the runtime path to include Vundle and initialize
+""" set rtp+=~/.vim/bundle/Vundle.vim
+""" call vundle#begin()
+
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+
+" " let Vundle manage Vundle, required
+""" Plugin 'gmarik/Vundle.vim'
+
+" " Add all your plugins here (note older versions of Vundle used Bundle instead
+" of Plugin)
+"""Plugin 'nvie/vim-flake8'
+"""Plugin 'scrooloose/syntastic'
+"""Plugin 'scrooloose/nerdtree'
+"""Plugin 'jistr/vim-nerdtree-tabs'
+"vim airline is faster than pwoerline
+"Bundle 'bling/vim-airline'
+"""Plugin 'vim-airline/vim-airline'
+"""Plugin 'vim-airline/vim-airline-themes'
+"""Plugin 'vim-scripts/indentpython.vim'
+"Bundle 'Valloric/YouCompleteMe'
+
+
+
+" " All of your Plugins must be added before the following line
+"""call vundle#end()            " required
 filetype plugin indent on    " required
 
 "Pretty 
 let python_highlight_all=1
 syntax on
+
+"Hide .pyc files
+"""let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+"Powerline
+""set rtp+=$HOME/.vim/bundle/powerline/powerline/bindings/vim/
+"set laststatus=2
+"set t_Co=256
+"
+"VimAirline
+
+
+
+"CompleteMe
+"let g:ycm_autoclose_preview_window_after_completion=1
+"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_python_binary_path = 'python'
+
 
 "Syntax
 syntax enable
@@ -78,6 +123,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"show whitespaces
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+"Use TAB to complete when typing words, else inserts TABs as usual.
+"Uses dictionary and source files to find matching words to complete.
 
 "See help completion for source,
 "Note: usual completion is on <C-n> but more trouble to press all the time.
@@ -94,4 +144,6 @@ endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/dict/words"
 
+"Start NERDTree directly
+"au VimEnter *  NERDTree
 

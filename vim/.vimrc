@@ -73,6 +73,7 @@ let python_highlight_all=1
 
 "Add line numbers
 set number
+set relativenumber
 set ruler
 
 "whitespace

@@ -3,18 +3,21 @@
 syntax enable
 set background=dark
 "set t_Co=256
-let g:solarized_termtrans = 1
+"let g:solarized_termtrans = 0
 let g:solarized_termcolors=16
-"colorscheme github
 colorscheme solarized
-"color smyck
+
+set background=dark
+" solarized options 
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
 
 "Add line numbers
 set number
 set ruler
 
-
-"whitespace
+"tabs
 set autoindent
 set noexpandtab
 set tabstop=4
@@ -24,7 +27,8 @@ set shiftwidth=4
 set encoding=utf-8
 
 "show trailing spaces and hard tabs
-set list lcs=tab:>-
+set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→
+highlight SpecialKey ctermfg=grey guifg=grey70
 "  Change default to ignore case for text searches
 set ic
 
@@ -35,29 +39,20 @@ set tw=132
 set wildmenu
 set wildmode=list:longest
 
-
 set title
-
-
 "sets higlight search
 set hlsearch
 
 "maeintain more context around the cursor
 set scrolloff=3
-
 "sets increment search
 set incsearch 
-
-" Color schemes:
-
 
 map <F7> :tabprevious<CR>
 map <F8> :tabnext<CR>
 
-
 "Use TAB to complete when typing words, else inserts TABs as usual.
 "Uses dictionary and source files to find matching words to complete.
-
 "See help completion for source,
 "Note: usual completion is on <C-n> but more trouble to press all the time.
 "Never type the same word twice and maybe learn a new spellings!

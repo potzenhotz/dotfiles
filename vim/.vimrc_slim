@@ -62,6 +62,9 @@ set incsearch
 map <F7> :tabprevious<CR>
 map <F8> :tabnext<CR>
 
+"map ctrl+p to inte3ractivly start the script
+map <C-p> :w<CR>:! %:p<CR>
+
 "Use TAB to complete when typing words, else inserts TABs as usual.
 "Uses dictionary and source files to find matching words to complete.
 "See help completion for source,

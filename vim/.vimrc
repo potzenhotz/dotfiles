@@ -92,10 +92,10 @@ set list lcs=tab:>-
 set ic
 
 "Zeilenumbruch wann von rechter Seite
-set tw=110
+set tw=130
 
 "Colorcolumn als Hilfe
-set colorcolumn=110 
+set colorcolumn=130 
 
 "TAB gibt alle moeglichkeiten
 set wildmenu

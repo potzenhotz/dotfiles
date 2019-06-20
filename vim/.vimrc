@@ -82,6 +82,7 @@ set hlsearch
 set scrolloff=3
 "sets increment search
 set incsearch 
+highlight IncSearch guibg=green ctermbg=green term=underline
 
 map <F7> :tabprevious<CR>
 map <F8> :tabnext<CR>

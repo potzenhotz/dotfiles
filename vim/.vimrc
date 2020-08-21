@@ -4,10 +4,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+"""Plugin 'gmarik/Vundle.vim'
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"""Plugin 'vim-airline/vim-airline'
+"""Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'davidhalter/jedi-vim'
+"""Bundle 'Valloric/YouCompleteMe'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,8 +46,11 @@ set ruler
 "tabs
 set autoindent
 set noexpandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+
+"
+set backspace=indent,eol,start
 
 "buffers not need to be saved when switching
 set hidden
@@ -90,6 +95,20 @@ map <F8> :tabnext<CR>
 "map ctrl+p to inte3ractivly start the script
 map <C-p> :w<CR>:! %:p<CR>
 
+
+"you comple me config
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+"set mucomple settings
+"set completeopt+=menuone
+"set shortmess+=c   " Shut off completion messages
+"set belloff+=ctrlg " If Vim beeps during completion
+"set completeopt-=preview
+"set completeopt+=longest,menuone,noselect
+"let g:jedi#popup_on_dot = 0  " It may be 1 as well
+"let g:mucomplete#enable_auto_at_startup = 1
+
 "Use TAB to complete when typing words, else inserts TABs as usual.
 "Uses dictionary and source files to find matching words to complete.
 "See help completion for source,
@@ -97,12 +116,12 @@ map <C-p> :w<CR>:! %:p<CR>
 "Never type the same word twice and maybe learn a new spellings!
 "Use the Linux dictionary when spelling is in doubt.
 "Window users can copy the file to their machine.
-function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-    return "\<C-N>"
-  else
-    return "\<Tab>"
-  endif
-endfunction
-:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
-:set dictionary="/usr/dict/words"
+"function! Tab_Or_Complete()
+"  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+"    return "\<C-N>"
+"  else
+"    return "\<Tab>"
+"  endif
+"endfunction
+":inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+":set dictionary="/usr/dict/words"

@@ -22,7 +22,8 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
   alias pi='ssh pi@192.168.178.30'
 
-  alias ll='ls -lrth'
+  #alias ll='ls -lrth'
+  alias ll='exa -lhrs mod'
   alias lls='ls -lSrh'
   alias llds='du -s'
 

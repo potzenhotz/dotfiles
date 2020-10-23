@@ -14,6 +14,8 @@ plugins=(
 	osx
 	zsh-autosuggestions
 )
+source $ZSH/oh-my-zsh.sh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 # Example aliases
   alias zshconfig="mate ~/.zshrc"
   alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -83,26 +85,6 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv)
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
-#plugins=(virtualenv)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-#export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

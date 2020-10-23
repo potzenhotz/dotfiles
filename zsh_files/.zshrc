@@ -7,6 +7,13 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
+plugins=(
+	git
+	dotenv
+	osx
+	zsh-autosuggestions
+)
 # Example aliases
   alias zshconfig="mate ~/.zshrc"
   alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -30,7 +37,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
   alias uberspace='ssh u300202@gienah.uberspace.de'
 
   #commits changes and deletion
-  alias yolo='git commit -am "DEAL WITH IT" && git push origin master'
+  alias yolo='git commit -am "DEAL WITH IT" && git push'
 
   alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
   alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
@@ -45,8 +52,6 @@ function virtualenv_info {
 }
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv)
-#export VIRTUAL_ENV_DISABLE_PROMPT=true
-#export VIRTUAL_ENV_DISABLE_PROMPT=
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -106,37 +111,19 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 #Tab completion after ..
-zstyle ':completion:*' special-dirs true
-
+#zstyle ':completion:*' special-dirs true
 
 #./wetter.sh
 export PATH=/usr/local/bin:$PATH
-#export PATH=/anaconda/bin:$PATH
 
 #Workaround for pandas python 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
-# added by Anaconda3 4.2.0 installer
-#export PATH="/home/potzenhotz/anaconda3/bin:$PATH"
-
 export TERM=xterm-256color
 
 export PATH="/usr/local/sbin:$PATH"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/usr/local/Caskroom/miniconda/4.6.14/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/usr/local/Caskroom/miniconda/4.6.14/miniconda3/etc/profile.d/conda.sh" ]; then
-#        . "/usr/local/Caskroom/miniconda/4.6.14/miniconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/usr/local/Caskroom/miniconda/4.6.14/miniconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda initialize <<<
+export PATH="$PATH:$HOME/.poetry/bin"
 
 fortune | cowsay
+eval "$(pyenv init -)"

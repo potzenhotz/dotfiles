@@ -107,5 +107,6 @@ export TERM=xterm-256color
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/.poetry/bin"
 
-fortune | cowsay
+#fortune | cowsay
 eval "$(pyenv init -)"
+neofetch
